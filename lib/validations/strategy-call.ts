@@ -32,11 +32,13 @@ export const strategyCallSchema = z.object({
     .min(1, "Please select your preferred time"),
 
   preferredDate: z
-    .date({
-      message: "Please select a preferred date",
-    })
+    .string()
+    .min(1, "Please select a preferred date")
     .refine(
-      (date) => date > new Date(),
+      (dateStr) => {
+        const date = new Date(dateStr);
+        return !isNaN(date.getTime()) && date > new Date();
+      },
       "Preferred date must be in the future"
     ),
 

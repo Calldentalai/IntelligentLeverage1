@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   strategyCallSchema,
-  type StrategyCallInput,
+  type StrategyCallFormData,
 } from "@/lib/validations/strategy-call";
 import { submitStrategyCall } from "@/lib/api/mock";
 import {
@@ -52,7 +52,7 @@ export const StrategyCallForm: React.FC = () => {
   // Get today's date in YYYY-MM-DD format for min date
   const today = new Date().toISOString().split("T")[0];
 
-  const form = useForm<StrategyCallInput>({
+  const form = useForm<StrategyCallFormData>({
     resolver: zodResolver(strategyCallSchema),
     defaultValues: {
       name: "",
@@ -66,7 +66,7 @@ export const StrategyCallForm: React.FC = () => {
     },
   });
 
-  const onSubmit = async (data: StrategyCallInput) => {
+  const onSubmit = async (data: StrategyCallFormData) => {
     setIsSubmitting(true);
     try {
       const result = await submitStrategyCall(data);
