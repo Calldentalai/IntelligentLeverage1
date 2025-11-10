@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import { Container, Heading } from "@/components/ui";
 import { Navbar } from "@/components/features/navigation";
 import { Footer } from "@/components/features/footer";
+import { CALENDAR_BOOKING_URL } from "@/config/calendar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui";
 import {
@@ -252,7 +253,9 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/apply"
+                  href={CALENDAR_BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 >
                   Apply to Join

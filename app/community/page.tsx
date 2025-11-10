@@ -9,6 +9,7 @@ import { Container, Heading, Button, Badge } from "@/components/ui";
 import { Navbar } from "@/components/features/navigation";
 import { Footer } from "@/components/features/footer";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { CALENDAR_BOOKING_URL } from "@/config/calendar";
 import {
   Users,
   MessageCircle,
@@ -140,7 +141,7 @@ export default function CommunityPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <Button size="lg" asChild>
-                  <a href="/apply?program=community">Join the Community</a>
+                  <a href={CALENDAR_BOOKING_URL} target="_blank" rel="noopener noreferrer">Join the Community</a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <a href="/programs">View Pricing</a>
@@ -343,7 +344,7 @@ export default function CommunityPage() {
 
             <div className="text-center mt-12">
               <Button size="lg" asChild>
-                <a href="/apply?program=community">Apply to Join Community</a>
+                <a href={CALENDAR_BOOKING_URL} target="_blank" rel="noopener noreferrer">Apply to Join Community</a>
               </Button>
               <p className="text-sm text-muted-foreground mt-4">
                 $497/month · Cancel anytime · 30-day money-back guarantee

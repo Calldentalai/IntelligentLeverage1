@@ -97,7 +97,7 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({
             className="w-full"
             asChild
           >
-            <a href={program.cta.href}>{program.cta.text}</a>
+            <a href={program.cta.href} target="_blank" rel="noopener noreferrer">{program.cta.text}</a>
           </Button>
         </CardFooter>
 

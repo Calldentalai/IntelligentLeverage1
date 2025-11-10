@@ -36,6 +36,8 @@ export const HeroCTA: React.FC<HeroCTAProps> = ({ primary, secondary }) => {
       {primary && (
         <motion.a
           href={primary.href}
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={buttonAnimations.hover}
           whileTap={buttonAnimations.tap}
           className={cn(
@@ -59,6 +61,8 @@ export const HeroCTA: React.FC<HeroCTAProps> = ({ primary, secondary }) => {
       {secondary && (
         <motion.a
           href={secondary.href}
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={buttonAnimations.hover}
           whileTap={buttonAnimations.tap}
           className={cn(

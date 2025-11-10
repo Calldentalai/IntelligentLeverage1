@@ -9,9 +9,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/features/navigation";
 import { Footer } from "@/components/features/footer";
-import { StrategyCallForm } from "@/components/features/forms";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
+import { CALENDAR_BOOKING_URL } from "@/config/calendar";
 import {
   Accordion,
   AccordionContent,
@@ -123,10 +123,19 @@ export default function CallPage() {
         </Container>
       </section>
 
-      {/* Form Section */}
+      {/* Calendar Section */}
       <section className="py-16 lg:py-24 bg-muted/30">
-        <Container maxWidth="lg">
-          <StrategyCallForm />
+        <Container maxWidth="xl">
+          <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+            <iframe
+              src={CALENDAR_BOOKING_URL}
+              width="100%"
+              height="1000px"
+              frameBorder="0"
+              style={{ border: 'none', minHeight: '1000px' }}
+              title="Book Your AI Strategy Call"
+            />
+          </div>
         </Container>
       </section>
 

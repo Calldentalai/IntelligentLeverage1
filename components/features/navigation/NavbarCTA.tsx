@@ -27,6 +27,8 @@ export const NavbarCTA: React.FC<NavbarCTAProps> = ({
     >
       <a
         href={href}
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-flex items-center justify-center px-5 py-2 text-sm text-white bg-black dark:bg-white dark:text-black rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
       >
         {label}

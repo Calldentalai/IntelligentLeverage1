@@ -9,6 +9,7 @@ import { Container, Heading, Button } from "@/components/ui";
 import { Navbar } from "@/components/features/navigation";
 import { Footer } from "@/components/features/footer";
 import { Programs } from "@/components/features/programs";
+import { CALENDAR_BOOKING_URL } from "@/config/calendar";
 import {
   Accordion,
   AccordionContent,
@@ -215,7 +216,7 @@ export default function ProgramsPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
-                  <a href="/apply">Apply Now</a>
+                  <a href={CALENDAR_BOOKING_URL} target="_blank" rel="noopener noreferrer">Apply Now</a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <a href="/contact">Schedule a Call</a>

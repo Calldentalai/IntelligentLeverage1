@@ -11,6 +11,7 @@ import { Footer } from "@/components/features/footer";
 import { ContactForm } from "@/components/features/forms";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Mail, MessageCircle, Calendar, MapPin } from "lucide-react";
+import { CALENDAR_BOOKING_URL } from "@/config/calendar";
 
 export const metadata: Metadata = {
   title: "Contact | IntelligentLeverage.AI",
@@ -211,7 +212,9 @@ export default function ContactPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/apply"
+                  href={CALENDAR_BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 >
                   Apply to Join

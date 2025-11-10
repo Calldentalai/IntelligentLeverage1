@@ -5,6 +5,8 @@
  * Following the Single Responsibility Principle (SRP) - this file only handles navigation configuration.
  */
 
+import { CALENDAR_BOOKING_URL } from "./calendar";
+
 export interface NavigationItem {
   label: string;
   href: string;
@@ -30,7 +32,7 @@ export const navigationConfig = {
 
   cta: {
     label: "Get Started",
-    href: "#get-started",
+    href: CALENDAR_BOOKING_URL,
   },
 
   footer: {

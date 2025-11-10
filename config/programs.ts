@@ -3,6 +3,8 @@
  * Contains data for IntelligentLeverage.AI programs
  */
 
+import { CALENDAR_BOOKING_URL } from "./calendar";
+
 export interface ProgramFeature {
   text: string;
   included: boolean;
@@ -42,7 +44,7 @@ export const programs: Program[] = [
     ],
     cta: {
       text: "Join Community",
-      href: "/apply?program=community",
+      href: CALENDAR_BOOKING_URL,
     },
     whoItsFor: "Entrepreneurs and business owners ready to integrate AI into their operations and connect with like-minded innovators.",
     outcomes: [
@@ -68,7 +70,7 @@ export const programs: Program[] = [
     ],
     cta: {
       text: "Apply for Academy",
-      href: "/apply?program=academy",
+      href: CALENDAR_BOOKING_URL,
     },
     whoItsFor: "Serious entrepreneurs ready to invest in building AI-powered systems that execute their business strategy autonomously.",
     outcomes: [
@@ -94,7 +96,7 @@ export const programs: Program[] = [
     ],
     cta: {
       text: "Request Invitation",
-      href: "/apply?program=labs",
+      href: CALENDAR_BOOKING_URL,
     },
     whoItsFor: "Visionary leaders and innovators operating at the cutting edge of AI implementation who want to shape the future of intelligent leverage.",
     outcomes: [

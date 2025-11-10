@@ -12,6 +12,7 @@ import { Footer } from "@/components/features/footer";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui";
 import { Calendar, Mail, MessageCircle } from "lucide-react";
+import { CALENDAR_BOOKING_URL } from "@/config/calendar";
 
 export const metadata: Metadata = {
   title: "Apply | IntelligentLeverage.AI",
@@ -68,7 +69,7 @@ export default function ApplyPage() {
                   Schedule a 30-minute consultation to discuss your AI goals
                 </p>
                 <Button variant="outline" className="w-full" asChild>
-                  <a href="/contact">Book Call</a>
+                  <a href={CALENDAR_BOOKING_URL} target="_blank" rel="noopener noreferrer">Book Call</a>
                 </Button>
               </div>
 

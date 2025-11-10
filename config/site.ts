@@ -5,6 +5,8 @@
  * Following the Single Responsibility Principle (SRP) - this file only handles site configuration.
  */
 
+import { CALENDAR_BOOKING_URL } from "./calendar";
+
 export const siteConfig = {
   name: "IntelligentLeverage.AI",
   description: "Multiply Your Future with Intelligent AI Leverage",
@@ -20,11 +22,11 @@ export const siteConfig = {
     cta: {
       primary: {
         text: "Get Started",
-        href: "#get-started",
+        href: CALENDAR_BOOKING_URL,
       },
       secondary: {
         text: "Learn More",
-        href: "#about",
+        href: CALENDAR_BOOKING_URL,
       },
     },
   },

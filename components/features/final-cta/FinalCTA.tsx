@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { fadeInUp, staggerContainer } from "@/config/animations";
 import { ArrowRight, Calendar } from "lucide-react";
+import { CALENDAR_BOOKING_URL } from "@/config/calendar";
 
 export const FinalCTA: React.FC = () => {
   return (
@@ -66,7 +67,7 @@ export const FinalCTA: React.FC = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
           >
             <Button size="lg" className="group" asChild>
-              <a href="/apply" className="flex items-center gap-2">
+              <a href={CALENDAR_BOOKING_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 Apply to Join
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
